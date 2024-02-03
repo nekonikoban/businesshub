@@ -9,112 +9,130 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="icon" type="ico" href="./assets/logo.ico">
     <style>
+        :root {
+            --main-bg-color: #eeeeee;
+            --main-text-color: #ecb100;
+            --accent-color: #ffca2c;
+            --secondary-color: #d4a004;
+            --link-color: #d4a004;
+            --link-hover-color: #ffca2c;
+            --navbar-bg-color: #b1b1b149;
+            --article-block-bg: #44444481;
+            --article-block-border: #555;
+            --article-block-hover: #333;
+            --btn-bg-color: #d4a004;
+            --btn-hover-color: #ffca2c;
+            --carousel-line-color: #ffca2c;
+        }
+    
         @font-face {
             font-family: 'Macaw Regular';
-            src: url('./assets/fonts/Macaw Regular.otf') format('opentype'); 
+            src: url('./assets/fonts/Macaw Regular.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
-
+    
         @font-face {
             font-family: 'Macaw Bold';
-            src: url('./assets/fonts/Macaw Bold.otf') format('opentype'); 
+            src: url('./assets/fonts/Macaw Bold.otf') format('opentype');
             font-weight: bold;
             font-style: normal;
         }
-        
+    
         @font-face {
             font-family: 'Macaw Italic';
-            src: url('./assets/fonts/Macaw Italic.otf') format('opentype'); 
+            src: url('./assets/fonts/Macaw Italic.otf') format('opentype');
             font-weight: italic;
             font-style: normal;
         }
-
+    
         body::-webkit-scrollbar {
-           width: 1px; 
+            width: 1px;
         }
     
         .custom-control-input:checked~.custom-control-label::before {
-            background-color: #ffca2c; 
-            border-color: #d4a004; 
+            background-color: var(--accent-color);
+            border-color: var(--secondary-color);
         }
-
+    
         body {
             font-family: 'Macaw Regular', sans-serif;
-            background-color: #333;
-            color: #fff;
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
             margin: 0;
             padding: 0;
             overflow-x: hidden;
         }
-
-        h1 {
+    
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Macaw Bold', sans-serif;
+            color: var(--main-text-color);
         }
-
+    
         .spacer {
             height: 20px;
         }
-
+    
         a {
             font-family: 'Macaw Italic', sans-serif;
             display: flex;
             align-items: center;
-            color: #d4a004;
+            color: var(--link-color);
             z-index: 999;
             transition: all 0.3s ease;
         }
-
+    
         a:hover {
             text-decoration: none;
-            color: #ffca2c;
+            color: var(--link-hover-color);
         }
-
+    
         .navbar {
             font-size: 18px;
             transition: background-color 0.3s ease;
+            background-color: var(--navbar-bg-color);
         }
-
+    
         .navbar-dark .navbar-toggler-icon {
-            background-color: #fff;
+            background-color: var(--main-text-color);
         }
-
+    
         .navbar-dark .navbar-nav .nav-link {
-            color: #fff;
+            color: var(--main-text-color);
         }
-
+    
         .navbar-dark .navbar-toggler {
-            border-color: #fff;
+            border-color: var(--main-text-color);
         }
-
+    
         .navbar-light .navbar-toggler-icon {
-            background-color: #000;
-        }   
-
+            background-color: var(--main-bg-color);
+        }
+    
         .navbar-light .navbar-nav .nav-link {
-            color: #000;
+            color: var(--main-bg-color);
         }
-
+    
         .navbar-light .navbar-toggler {
-            border-color: #000;
+            border-color: var(--main-bg-color);
         }
-
+    
         .dark-mode {
             background-color: #222 !important;
             color: #ddd !important;
         }
-
+    
         .dark-mode .navbar {
-            background-color: #2b2b2b !important;
+            background-color: var(--navbar-bg-color) !important;
         }
-
+    
         .dark-mode .article-block {
-            background-color: #333 !important;
+            background-color: var(--article-block-bg) !important;
         }
-
+    
         .carousel-line {
             height: 2px;
-            background-color: #ffca2c;
+            background-color: var(--carousel-line-color);
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -122,84 +140,86 @@
             width: 20%;
             transition: width 0.5s ease;
         }
-
+    
         #carouselExample {
             padding-top: 100px;
             padding-left: 10%;
             padding-right: 10%;
         }
-
+    
         .carousel-inner {
             padding: 5%;
         }
-
+    
         .carousel-item img {
             object-fit: fill;
             border-radius: 20px;
         }
-        
+    
         .img-fluid {
             border-radius: 5px;
         }
-
+    
         .article-block {
             position: relative;
-            z-index: 999; 
-            background-color: #444;
-            color: #fff;
-            border: 1px solid #555;
+            z-index: 999;
+            background-color: var(--article-block-bg);
+            color: var(--main-text-color);
+            border: 1px solid var(--article-block-border);
             margin: 10px 0;
             padding: 15px;
             border-radius: 10px;
-            transition: background-color 0.9s ease, opacity 0.3s ease; 
+            transition: background-color 0.9s ease, opacity 0.3s ease;
         }
-
+    
         .article-block:hover {
             opacity: 0.8;
+            background-color: var(--article-block-hover);
         }
-
+    
         .review-section {
             margin-top: 20px;
         }
-
+    
         .btn-custom {
-            background-color: #d4a004;
-            color: #333;
+            background-color: var(--btn-bg-color);
+            color: var(--main-bg-color);
             transition: background-color 0.3s ease;
         }
-
+    
         .btn-custom:hover {
-            background-color: #ffca2c;
+            background-color: var(--btn-hover-color);
         }
-
+    
         .page-transition {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
-
+    
         .page-transition.active {
             opacity: 1;
             transform: translateY(0);
         }
-
+    
         .comment-review-icons {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
         }
-
+    
         .comment-review-icons div {
             display: flex;
             align-items: center;
-            color: #fff;
+            color: var(--main-text-color);
         }
-
+    
         .comment-review-icons span {
             margin-left: 5px;
         }
     </style>
+    
 </head>
 <!-- Popper -->
 <script>
@@ -218,7 +238,7 @@
     }
 </script>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a class="navbar-brand" href="#"><img src="./assets/logo.png" style="width:100px;" alt="UAE & Bosnia"> LOGO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
