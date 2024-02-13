@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
       <header className="s-header">
         <div className="header-logo">
           <a className="site-logo" href="index.html">
-            <img src="./images/logo.svg" alt="Homepage" />
+            <Image src="./images/logo.svg" alt="Homepage" />
           </a>
         </div>
         <nav className="header-nav">
@@ -280,7 +281,7 @@ export default function Home() {
               <h3 className="h2">BusinessHub Marketing</h3>
               <p>
                 Drive business growth with our comprehensive marketing strategies.
-                From digital marketing to traditional methods, we'll help you reach
+                From digital marketing to traditional methods, we will help you reach
                 your target audience and increase brand visibility.
               </p>
             </div>
@@ -359,7 +360,7 @@ export default function Home() {
                       title="CoffeeShop"
                       data-size="1050x700"
                     >
-                      <img
+                      <Image
                         src="images/portfolio/portfolio_1.jpg"
                         srcSet="images/portfolio/portfolio_1.jpg 1x, images/portfolio/portfolio_1.jpg 2x"
                         alt=""
@@ -395,7 +396,7 @@ export default function Home() {
                       title="Design"
                       data-size="1050x700"
                     >
-                      <img
+                      <Image
                         src="images/portfolio/portfolio_2.jpg"
                         srcSet="images/portfolio/portfolio_2.jpg 1x, images/portfolio/portfolio_2.jpg 2x"
                         alt=""
@@ -431,7 +432,7 @@ export default function Home() {
                       title="Webapp"
                       data-size="1050x700"
                     >
-                      <img
+                      <Image
                         src="images/portfolio/portfolio_3.png"
                         srcSet="images/portfolio/portfolio_3.png, images/portfolio/portfolio_3.png"
                         alt=""
@@ -467,7 +468,7 @@ export default function Home() {
                       title="Shisha Bar"
                       data-size="1050x700"
                     >
-                      <img
+                      <Image
                         src="images/portfolio/portfolio_4.jpg"
                         srcSet="images/portfolio/portfolio_4.jpg 1x, images/portfolio/portfolio_4.jpg 2x"
                         alt=""
@@ -503,7 +504,7 @@ export default function Home() {
                       title="Fragnances"
                       data-size="1050x700"
                     >
-                      <img
+                      <Image
                         src="images/portfolio/portfolio_5.jpg"
                         srcSet="images/portfolio/portfolio_5.jpg 1x, images/portfolio/portfolio_5@2x.jpg 2x"
                         alt=""
@@ -539,7 +540,7 @@ export default function Home() {
                       title="Fashion"
                       data-size="1050x700"
                     >
-                      <img
+                      <Image
                         src="images/portfolio/portfolio_6.jpg"
                         srcSet="images/portfolio/portfolio_6.jpg 1x, images/portfolio/portfolio_6@2x.jpg 2x"
                         alt=""
@@ -588,28 +589,28 @@ export default function Home() {
           <div className="col-full">
             <div className="clients">
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/apple.png" />
+                <Image src="images/clients/apple.png" />
               </a>
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/atom.png" />
+                <Image src="images/clients/atom.png" />
               </a>
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/blackberry.png" />
+                <Image src="images/clients/blackberry.png" />
               </a>
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/dropbox.png" />
+                <Image src="images/clients/dropbox.png" />
               </a>
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/envato.png" />
+                <Image src="images/clients/envato.png" />
               </a>
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/firefox.png" />
+                <Image src="images/clients/firefox.png" />
               </a>
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/joomla.png" />
+                <Image src="images/clients/joomla.png" />
               </a>
               <a href="#0" title="" className="clients__slide">
-                <img src="images/clients/magento.png" />
+                <Image src="images/clients/magento.png" />
               </a>
             </div>{" "}
             {/* end clients */}
@@ -628,7 +629,7 @@ export default function Home() {
                   praesentium corpori. Excepturi nam cupiditate culpa doloremque
                   deleniti repellat.
                 </p>
-                <img
+                <Image
                   src="images/avatars/user-01.jpg"
                   alt="Author image"
                   className="testimonials__avatar"
@@ -645,7 +646,7 @@ export default function Home() {
                   consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui
                   ipsam temporibus quisquam vel.
                 </p>
-                <img
+                <Image
                   src="images/avatars/user-05.jpg"
                   alt="Author image"
                   className="testimonials__avatar"
@@ -662,7 +663,7 @@ export default function Home() {
                   officia cum exercitationem sunt voluptatum accusamus. Quasi
                   voluptas eius distinctio.
                 </p>
-                <img
+                <Image
                   src="images/avatars/user-02.jpg"
                   alt="Author image"
                   className="testimonials__avatar"
@@ -771,7 +772,7 @@ export default function Home() {
             </div>
             {/* contact-success */}
             <div className="message-success">
-              Your business details were submitted successfully! We'll get in touch
+              Your business details were submitted successfully! We will get in touch
               soon.
               <br />
             </div>
